@@ -73,6 +73,9 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -160,5 +163,12 @@
       <Project>{7D6350D1-F6C2-4317-A017-0423ECA5B973}</Project>
       <Name>CookBook</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <BundleResource Include="Resources\icon.ico" />
   </ItemGroup>
 </Project>
