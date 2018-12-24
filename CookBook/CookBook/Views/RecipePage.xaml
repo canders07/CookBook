@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CookBook.Views.RecipePage"
+             >
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Ingredients:" FontAttributes="Bold" FontSize="Large"/>
+            <ListView x:Name="IngredientList"
+              ItemsSource="{Binding Ingredients}"
+              HasUnevenRows="True"              
+              SeparatorVisibility="Default"
+              HorizontalOptions="FillAndExpand" 
+              VerticalOptions="Start">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="6,4,6,4">
+                                <Label Text="{Binding Name}"
+                               Margin="8"
+                               FontAttributes="Bold"
+                               FontSize="Medium"/>                            
+                                <Label Text="{Binding Amount}"
+                               Margin="8,2,8,4"                               
+                               FontSize="Small"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label Text="Directions:" FontAttributes="Bold" FontSize="Large"/>
+            <ScrollView>
+            <Label x:Name="DirectionTxt" FontSize="Medium"/>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CookBook.Views.HomePage"
+             Title="My Family Cookbook">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="addBtn" Text="Add Recipe" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="ListViewMenuFolders"
+              ItemsSource="{Binding Folders}"
+              HasUnevenRows="False"
+              
+              SeparatorVisibility="Default"
+              HorizontalOptions="FillAndExpand" 
+              VerticalOptions="FillAndExpand">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Margin="6,4,6,4">
+                        <Label Text="{Binding Name}"
+                               Margin="8"
+                               FontAttributes="Bold"
+                               FontSize="Medium"
+                               />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
